@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2fki2ws4ysmh"]
+
+[ext_resource type="PackedScene" uid="uid://dibs1ha0ysnl8" path="res://Scenes/platform.tscn" id="1_ivu65"]
+[ext_resource type="PackedScene" uid="uid://bkr3u2iypy6pf" path="res://Scenes/player.tscn" id="2_qvvy4"]
+[ext_resource type="PackedScene" uid="uid://ccnx5mv80sb14" path="res://Scenes/bounce_wall.tscn" id="3_ty6qh"]
+
+[node name="World" type="Node2D"]
+
+[node name="PlatformOne" parent="." instance=ExtResource("1_ivu65")]
+scale = Vector2(100, 2)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_qvvy4")]
+position = Vector2(0, -65)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(0, 65)
+
+[node name="BounceWall" parent="." instance=ExtResource("3_ty6qh")]
+position = Vector2(497, -200)
+scale = Vector2(1, 10)
+
+[node name="BounceWall2" parent="." instance=ExtResource("3_ty6qh")]
+position = Vector2(-494, -200)
+scale = Vector2(1, 10)

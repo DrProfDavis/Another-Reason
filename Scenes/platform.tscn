@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dibs1ha0ysnl8"]
+
+[ext_resource type="Texture2D" uid="uid://c37djmcrre5tq" path="res://Assets/IcePlatform.png" id="1_x7uj0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oeo7e"]
+size = Vector2(10, 10)
+
+[node name="Platform" type="Node2D"]
+scale = Vector2(5, 5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_oeo7e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_x7uj0")
